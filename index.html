@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pumped Fitness — Legal</title>
+  <style>
+    :root { --bg: #0a0a0a; --surface: #141414; --text: #e2e8f0; --text-secondary: #94a3b8; --accent: #3b82f6; --border: #1e293b; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .container { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    .logo { text-align: center; margin-bottom: 40px; }
+    .logo h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.5px; }
+    .logo p { color: var(--text-secondary); font-size: 14px; margin-top: 4px; }
+    .tabs { display: flex; gap: 8px; margin-bottom: 32px; border-bottom: 1px solid var(--border); padding-bottom: 12px; }
+    .tab { padding: 8px 20px; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 600; color: var(--text-secondary); background: transparent; border: none; transition: all 0.2s; }
+    .tab:hover { color: var(--text); background: var(--surface); }
+    .tab.active { color: var(--accent); background: rgba(59,130,246,0.1); }
+    .section { display: none; }
+    .section.active { display: block; }
+    .card { background: var(--surface); border-radius: 16px; padding: 32px; margin-bottom: 24px; border: 1px solid var(--border); }
+    h2 { font-size: 24px; font-weight: 700; margin-bottom: 16px; }
+    h3 { font-size: 16px; font-weight: 600; margin: 24px 0 8px; color: var(--accent); }
+    p, li { color: var(--text-secondary); font-size: 14px; margin-bottom: 8px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    .updated { color: var(--text-secondary); font-size: 12px; margin-bottom: 24px; }
+    .footer { text-align: center; color: var(--text-secondary); font-size: 12px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); }
+    .footer a { color: var(--accent); text-decoration: none; }
+    @media (max-width: 640px) { .container { padding: 24px 16px 60px; } .card { padding: 20px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <h1>Pumped Fitness</h1>
+      <p>Your personal fitness companion</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('privacy')">Privacy Policy</button>
+      <button class="tab" onclick="showTab('terms')">Terms of Service</button>
+    </div>
+
+    <div id="privacy" class="section active">
+      <div class="card">
+        <h2>Privacy Policy</h2>
+        <p class="updated">Last updated: March 27, 2026</p>
+
+        <p>Pumped Fitness ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+
+        <h3>1. Information We Collect</h3>
+        <p><strong>Account Information</strong></p>
+        <ul>
+          <li>Email address (for email/password sign-in)</li>
+          <li>Display name (optional)</li>
+          <li>Authentication tokens from Google or Apple Sign-In</li>
+        </ul>
+        <p><strong>Workout Data</strong></p>
+        <ul>
+          <li>Exercise selections, sets, reps, and weights</li>
+          <li>Workout duration and completion dates</li>
+          <li>Personal records and training preferences</li>
+          <li>Custom routines you create</li>
+        </ul>
+        <p><strong>Device & Usage Data</strong></p>
+        <ul>
+          <li>Device type and operating system version</li>
+          <li>App version and crash reports (via Sentry)</li>
+          <li>General usage patterns for app improvement</li>
+        </ul>
+        <p><strong>We do NOT collect:</strong></p>
+        <ul>
+          <li>Location data</li>
+          <li>Contacts or phone data</li>
+          <li>Photos or camera data</li>
+          <li>Health data (Apple Health sync is opt-in and stays on your device)</li>
+        </ul>
+
+        <h3>2. How We Use Your Information</h3>
+        <ul>
+          <li>To provide and maintain the app's core functionality</li>
+          <li>To sync your workout data across devices (Cloud Backup)</li>
+          <li>To generate personalized workout plans</li>
+          <li>To track your fitness progress and streaks</li>
+          <li>To send workout reminders (if enabled)</li>
+          <li>To diagnose and fix bugs via crash reporting</li>
+        </ul>
+
+        <h3>3. Data Storage & Security</h3>
+        <ul>
+          <li>Your workout data is stored locally on your device using encrypted storage</li>
+          <li>Cloud backups are stored in Google Firebase (Firestore) with security rules</li>
+          <li>Sensitive fields are encrypted at rest</li>
+          <li>We use HTTPS for all data transmission</li>
+          <li>We do not sell, rent, or share your personal data with third parties</li>
+        </ul>
+
+        <h3>4. Third-Party Services</h3>
+        <ul>
+          <li><strong>Firebase Authentication</strong> — for secure sign-in</li>
+          <li><strong>Firebase Firestore</strong> — for cloud data backup</li>
+          <li><strong>Sentry</strong> — for anonymous crash reporting (no personal data)</li>
+          <li><strong>Google Sign-In / Apple Sign-In</strong> — for social authentication</li>
+        </ul>
+
+        <h3>5. Your Rights</h3>
+        <ul>
+          <li>Access your data through the app</li>
+          <li>Export your workout history</li>
+          <li>Delete your account and all associated data (Settings → Delete Account)</li>
+          <li>Opt out of notifications at any time</li>
+          <li>Disconnect Apple Health integration at any time</li>
+        </ul>
+
+        <h3>6. Data Retention</h3>
+        <p>We retain your data for as long as your account is active. When you delete your account, all local data is immediately erased and all cloud data is permanently deleted.</p>
+
+        <h3>7. Children's Privacy</h3>
+        <p>Pumped Fitness is not intended for children under 13. We do not knowingly collect personal information from children under 13.</p>
+
+        <h3>8. Changes to This Policy</h3>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Last updated" date.</p>
+
+        <h3>9. Contact Us</h3>
+        <p>If you have questions about this Privacy Policy, contact us at: <a href="mailto:support@pumpedapp.net" style="color: var(--accent);">support@pumpedapp.net</a></p>
+      </div>
+    </div>
+
+    <div id="terms" class="section">
+      <div class="card">
+        <h2>Terms of Service</h2>
+        <p class="updated">Last updated: March 27, 2026</p>
+
+        <p>Please read these Terms of Service ("Terms") carefully before using the Pumped Fitness mobile application.</p>
+
+        <h3>1. Acceptance of Terms</h3>
+        <p>By downloading, installing, or using Pumped Fitness, you agree to be bound by these Terms. If you do not agree, do not use the app.</p>
+
+        <h3>2. Description of Service</h3>
+        <p>Pumped Fitness is a workout tracking and fitness planning application that allows you to track workouts, follow personalized training plans, monitor progress, create custom routines, and sync data across devices.</p>
+
+        <h3>3. User Accounts</h3>
+        <ul>
+          <li>You must create an account to use the app</li>
+          <li>You are responsible for maintaining the security of your account</li>
+          <li>You must provide accurate information</li>
+          <li>You must be at least 13 years old to use the app</li>
+        </ul>
+
+        <h3>4. Acceptable Use</h3>
+        <p>You agree not to use the app for any unlawful purpose, attempt to reverse engineer the app, interfere with security features, or share your account credentials.</p>
+
+        <h3>5. Health Disclaimer</h3>
+        <p><strong>Important:</strong> Pumped Fitness is a workout tracking tool, not medical advice. Always consult a healthcare professional before starting any exercise program. You exercise at your own risk and are solely responsible for your physical safety.</p>
+
+        <h3>6. Intellectual Property</h3>
+        <p>The app, including its design, code, and content, is owned by Pumped Fitness. You retain ownership of the workout data you create.</p>
+
+        <h3>7. Data & Privacy</h3>
+        <p>Your use of the app is governed by our Privacy Policy. By using the app, you consent to the collection and use of information as described therein.</p>
+
+        <h3>8. Termination</h3>
+        <p>You may delete your account at any time through Settings. We reserve the right to suspend accounts that violate these Terms.</p>
+
+        <h3>9. Disclaimer of Warranties</h3>
+        <p>The app is provided "as is" without warranties of any kind. We do not guarantee the app will be error-free or uninterrupted.</p>
+
+        <h3>10. Limitation of Liability</h3>
+        <p>To the maximum extent permitted by law, Pumped Fitness shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the app.</p>
+
+        <h3>11. Changes to Terms</h3>
+        <p>We reserve the right to modify these Terms at any time. Continued use constitutes acceptance.</p>
+
+        <h3>12. Contact Us</h3>
+        <p>For questions about these Terms, contact us at: <a href="mailto:support@pumpedapp.net" style="color: var(--accent);">support@pumpedapp.net</a></p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>© 2026 Pumped Fitness. All rights reserved.</p>
+      <p><a href="mailto:support@pumpedapp.net">support@pumpedapp.net</a></p>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tab) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(tab).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
